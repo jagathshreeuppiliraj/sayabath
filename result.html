@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Result - Demo</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#f4f6f8;font-family:Arial,Helvetica,sans-serif;color:#30445b}
+body{min-height:100vh;padding:14px 18px;position:relative}
+.demo{
+  position:fixed;top:8px;right:14px;z-index:10;
+  color:#a5003a;font-weight:700;font-size:12px;
+  background:#fff;padding:5px 9px;border-radius:3px;
+  border:1px solid #a5003a;
+}
+.header{
+  background:#a90043;color:#fff;
+  min-height:82px;padding:12px 17px;
+  display:grid;
+  grid-template-columns:1.1fr 1.15fr 2fr 1fr;
+  gap:20px;align-items:center;
+  font-size:18px;
+}
+.header-item{line-height:1.45}
+.header-label{font-weight:400}
+.header-value{font-weight:400}
+.table-wrap{
+  margin-top:26px;
+  width:100%;
+  overflow-x:auto;
+  background:#fff;
+}
+table{
+  width:100%;
+  min-width:1050px;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+th,td{
+  border:1px solid #cfd7dd;
+  padding:14px 14px;
+  text-align:left;
+  vertical-align:middle;
+  font-size:18px;
+}
+th{
+  background:#f8fafb;
+  font-weight:700;
+  color:#29445f;
+  height:72px;
+}
+td{height:66px}
+th:nth-child(1){width:10%}
+th:nth-child(2){width:11%}
+th:nth-child(3){width:20%}
+th:nth-child(4){width:11%}
+th:nth-child(5){width:12%}
+th:nth-child(6){width:12%}
+th:nth-child(7){width:7%}
+th:nth-child(8){width:10%}
+th:nth-child(9){width:7%}
+.course-title{line-height:1.45}
+.status{color:#30445b}
+@media(max-width:800px){
+  body{padding:8px 10px}
+  .header{
+    grid-template-columns:1fr 1fr;
+    gap:8px 18px;
+    font-size:15px;
+  }
+  th,td{font-size:15px;padding:11px}
+  th{height:65px}
+}
+</style>
+</head>
+<body>
+
+<!-- <div class="demo">DEMO — NOT AN OFFICIAL ACADEMIC RECORD</div> -->
+
+<section class="header">
+  <div class="header-item">
+    <span class="header-label">Register Number:</span><br>
+    <span class="header-value">145740123</span>
+  </div>
+
+  <div class="header-item">
+    <span class="header-label">Student Name:</span>
+    <span class="header-value"> R SUDARSAN</span>
+  </div>
+
+  <div class="header-item">
+    <span class="header-label">Programme:</span>
+    <span class="header-value"> Bachelor of Commerce - BACHELOR OF COMMERCE</span>
+  </div>
+
+  <div class="header-item">
+    <span class="header-label">Batch:</span>
+    <span class="header-value"> 2025-2028</span>
+  </div>
+</section>
+
+<section class="table-wrap">
+<table>
+<thead>
+<tr>
+  <th>Semester</th>
+  <th>Course<br>Code</th>
+  <th>Course Title</th>
+  <th>Course<br>Type</th>
+  <th>Internal<br>Marks</th>
+  <th>External<br>Marks</th>
+  <th>Total</th>
+  <th>Max.<br>Marks</th>
+  <th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>SBAB1101</td>
+  <td class="course-title">Business<br>Validation</td>
+  <td>Theory</td>
+  <td>40</td>
+  <td>29</td>
+  <td>79</td>
+  <td>100</td>
+  <td class="status">Pass</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>SBAB1102</td>
+  <td>Business Economics</td>
+  <td>Theory</td>
+  <td>34</td>
+  <td>35</td>
+  <td>69</td>
+  <td>100</td>
+  <td class="status">Pass</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>SBAB1104</td>
+  <td>Business Organisation</td>
+  <td>Theory</td>
+  <td>32</td>
+  <td>44</td>
+  <td>76</td>
+  <td>100</td>
+  <td class="status">Pass</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>SCOB1101</td>
+  <td>Corporate Accounts</td>
+  <td>Theory</td>
+  <td>46</td>
+  <td>35</td>
+  <td>81</td>
+  <td>100</td>
+  <td class="status">Pass</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>SMTB1106</td>
+  <td>Business Taxation</td>
+  <td>Theory</td>
+  <td>36</td>
+  <td>34</td>
+  <td>70</td>
+  <td>100</td>
+  <td class="status">Pass</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sathyabama ERP Login</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;font-family:Arial,Helvetica,sans-serif}
+body{
+  min-height:100vh;
+  filter: brightness(1.0);
+  background:#17628b url("sss.png")  center center/cover no-repeat;
+  /* background: url(&quot;./assets/images/loginbg1.jpg&quot;) center center / cover no-repeat fixed; */
+  color:#fff;
+  overflow:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;
+  background:rgba(8,72,108,.22);
+  z-index:0;
+}
+.login-box{
+  position:absolute;
+  z-index:1;
+  width:482px;
+  height:568px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:5px;
+  background:rgba(55,115,146,.36);
+  padding:39px 39px 25px;
+}
+.logo{
+  width:302px;
+  height:79px;
+  margin:0 auto 28px;
+  background:#a8003d;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:9px;
+}
+.logo-title{
+  font-size:25px;
+  line-height:25px;
+  font-weight:900;
+  letter-spacing:.2px;
+}
+.logo-sub{
+  font-size:7px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-top:1px;
+}
+.logo-small{
+  font-size:6.5px;
+  font-weight:700;
+  margin-top:4px;
+}
+.instruction{
+  text-align:center;
+  font-size:16px;
+  line-height:21px;
+  margin-bottom:15px;
+}
+label{
+  display:block;
+  font-size:16px;
+  font-weight:700;
+  margin:0 0 9px;
+}
+select,input{
+  display:block;
+  width:100%;
+  height:50px;
+  border:1px solid transparent;
+  border-radius:4px;
+  background:#fff;
+  padding:0 16px;
+  font-size:16px;
+  color:#555;
+  outline:none;
+  margin-bottom:26px;
+}
+select:focus,input:focus{border-color:#b40046}
+.password-wrap{position:relative}
+.password-wrap input{padding-right:50px}
+.eye{
+  position:absolute;
+  right:16px;
+  top:14px;
+  color:#000;
+  cursor:pointer;
+  font-size:18px;
+  user-select:none;
+}
+.login{
+  width:100%;
+  height:50px;
+  border:0;
+  border-radius:4px;
+  background:#ff7900;
+  color:white;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:-1px;
+}
+.login:hover{background:#ed7000}
+.forgot{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-46px;
+  text-align:center;
+  color:white;
+  font-size:16px;
+  text-decoration:none;
+  cursor:pointer;
+}
+@media(max-width:700px){
+  .login-box{width:calc(100vw - 42px);height:auto;min-height:550px;padding:32px 30px}
+  .logo{width:min(302px,100%);height:76px}
+}
+</style>
+</head>
+<body>
+
+<div class="login-box">
+  <div class="logo">
+    <div>
+      <div class="logo-title">SATHYABAMA</div>
+      <div class="logo-sub">INSTITUTE OF SCIENCE AND TECHNOLOGY</div>
+      <div class="logo-small">(DEEMED TO BE UNIVERSITY)<br>CATEGORY - 1 UNIVERSITY BY UGC</div>
+    </div>
+  </div>
+
+  <div class="instruction">
+    Enter your RegNo and DOB to access<br>
+    student panel.
+  </div>
+
+  <label for="role">Student</label>
+  <select id="role">
+    <option>Student</option>
+  </select>
+
+  <label for="regno">Register Number</label>
+  <input id="regno" type="text" placeholder="Register Number">
+
+  <label for="password">Password</label>
+  <div class="password-wrap">
+    <input id="password" type="password" placeholder="Enter Password">
+    <span class="eye" onclick="togglePassword()">◉</span>
+  </div>
+
+  <button class="login" onclick="login()">LOG IN</button>
+  <a class="forgot" onclick="forgot()">Forgot your password?</a>
+</div>
+
+<script>
+function togglePassword(){
+  const field=document.getElementById("password");
+  field.type = field.type === "password" ? "text" : "password";
+}
+function login(){
+  const reg=document.getElementById("regno").value.trim();
+  const pass=document.getElementById("password").value.trim();
+
+  if(!reg || !pass){
+    alert("Please enter your Register Number and Password.");
+    return;
+  }
+
+  // Change this filename to your actual next page.
+  window.location.href="result.html";
+}
+function forgot(){
+  alert("Password recovery page.");
+}
+</script>
+</body>
+</html>
